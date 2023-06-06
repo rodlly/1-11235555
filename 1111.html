@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>计算n的阶乘</title>
+  </head>
+  <body>
+    <h1>计算n的阶乘</h1>
+    <p>请输入一个数字n：</p>
+    <input type="number" id="inputNumber" />
+    <button onclick="calculateFactorial()">计算阶乘</button>
+    <p id="result"></p>
+    <script>
+      function calculateFactorial() {
+        // 获取输入数字
+        const n = document.getElementById("inputNumber").value;
+        
+        // 计算阶乘
+        let factorial = 1;
+        for (let i = 1; i <= n; i++) {
+          factorial *= i;
+        }
+        
+        // 显示结果
+        document.getElementById("result").innerHTML = n + "! = " + factorial;
+      }
+    </script>
+  </body>
+</html>
